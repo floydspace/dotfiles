@@ -44,6 +44,7 @@
           "flyctl"
           "ios-deploy"
           "localstack-cli"
+          "openssl@3" # Required by vscode to push to github
           "rbenv"
           "ruby"
           "scrcpy"
