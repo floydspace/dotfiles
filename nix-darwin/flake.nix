@@ -8,7 +8,7 @@
     # nix-homebrew.url = "github:zhaofengli/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
+  outputs = inputs@{ self, nixpkgs, nix-darwin }:
   let
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
@@ -19,14 +19,60 @@
           pkgs.alacritty
           pkgs.bun
           pkgs.deno
-          pkgs.iterm2
+          # pkgs.direnv
+          pkgs.gh
+          pkgs.git
+          pkgs.go
+          pkgs.goreleaser
+          # pkgs.iterm2
+          pkgs.jq
           pkgs.slack
           pkgs.vim
+          pkgs.zoom-us
         ];
 
-      # homebrew = {
-      #   enable = true;
-      # };
+      homebrew = {
+        enable = true;
+        brews = [
+          "awscli"
+          "applesimutils"
+          "aws-sso-creds"
+          "aws-sso-util"
+          "certifi"
+          "cocoapods"
+          "direnv"
+          "flyctl"
+          "ios-deploy"
+          "localstack-cli"
+          "rbenv"
+          "ruby"
+          "scrcpy"
+          "telnet"
+          "tfenv"
+        ];
+        taps = [
+          "jaxxstorm/tap"
+          "localstack/tap"
+          "wix/brew"
+        ];
+        casks = [
+          "drawio"
+          "figma"
+          "iterm2"
+          "kdiff3"
+          "mongodb-compass"
+          "postman"
+          "sourcetree"
+          "spotify"
+        ];
+        masApps = {
+          Telegram = 747648890;
+          WireGuard = 1451685025;
+          "WhatsApp Messenger" = 310633997;
+          Xcode = 497799835;
+        };
+        onActivation.cleanup = "zap";
+      };
 
       fonts.packages = [
         (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
@@ -50,7 +96,6 @@
       system.stateVersion = 5;
 
       system.defaults = {
-        dock.autohide = false;
         finder.FXPreferredViewStyle = "Nlsv";
         NSGlobalDomain.AppleICUForce24HourTime = true;
         NSGlobalDomain.AppleShowAllExtensions = true;
