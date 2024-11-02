@@ -16,12 +16,11 @@
       nixpkgs.config.allowUnfree = true;
       environment.systemPackages =
         [ 
-          pkgs.alacritty
           pkgs.bun
           pkgs.deno
-          # pkgs.direnv
+          # pkgs.direnv # There is some issue with zsh config
           pkgs.gh
-          pkgs.git
+          # pkgs.git # There is some issue with OpenSSL when pushing to github
           pkgs.go
           pkgs.goreleaser
           # pkgs.iterm2
@@ -42,9 +41,9 @@
           "cocoapods"
           "direnv"
           "flyctl"
+          "git"
           "ios-deploy"
           "localstack-cli"
-          "openssl@3" # Required by vscode to push to github
           "rbenv"
           "ruby"
           "scrcpy"
