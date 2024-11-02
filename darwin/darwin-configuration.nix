@@ -9,7 +9,7 @@
 #           └─ default.nix
 #
 
-{ pkgs, vars, ... }:
+{ inputs, pkgs, vars, ... }:
 
 {
   imports = (import ./modules);
@@ -86,20 +86,18 @@
 
   services.nix-daemon.enable = true;
 
-#   nix = {
-#     package = pkgs.nix;
-#     gc = {
-#       automatic = true;
-#       interval.Day = 7;
-#       options = "--delete-older-than 7d";
-#     };
-#     extraOptions = ''
-#       # auto-optimise-store = true
-#       experimental-features = nix-command flakes
-#     '';
-#   };
+  # Set Git commit hash for darwin-version.
+  system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
 
-  system = {
-    stateVersion = 5;
+  nix = {
+    package = pkgs.nix;
+    settings.experimental-features = "nix-command flakes";
+    gc = {
+      automatic = true;
+      interval.Day = 7;
+      options = "--delete-older-than 7d";
+    };
   };
+
+  system.stateVersion = 5;
 }

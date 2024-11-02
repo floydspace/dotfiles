@@ -2,7 +2,7 @@
 #  Terminal Configuration
 #
 
-{ vars, ... }:
+{ pkgs, vars, ... }:
 
 {
   environment = {

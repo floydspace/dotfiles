@@ -31,7 +31,6 @@
       # Variables Used In Flake
       vars = {
         user = "victor";
-        location = "$HOME/.setup";
         editor = "nvim";
       };
     in

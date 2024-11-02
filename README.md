@@ -8,13 +8,13 @@ export NIX_INSTALLER_SSL_CERT_FILE=/path/to/your/certificate.pem
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
 # 3. Install `nix-darwin` with flake
-nix run nix-darwin -- switch --flake "./nix-darwin#default"
+nix run nix-darwin -- switch --flake ".#MacBookM2Pro"
 ```
 
 How to apply nix-darwin configuration:
 
 ```sh
-darwin-rebuild switch --flake "./nix-darwin#default"
+darwin-rebuild switch --flake ".#MacBookM2Pro"
 ```
 
 Update packages:
@@ -22,7 +22,7 @@ Update packages:
 ```sh
 nix flake update --flake "./nix-darwin"
 
-darwin-rebuild switch --flake "./nix-darwin#default"
+darwin-rebuild switch --flake ".#MacBookM2Pro"
 ```
 
 Cleanup unused packages:
@@ -44,3 +44,9 @@ nix-collect-garbage -d
   warning: error: unable to download 'https://cache.nixos.org/8n8a23azcm8smr1q6xk77jb2pgxa518f.narinfo': SSL peer certificate or SSH remote key was not OK (60); retrying in 310 ms
   ```
   I had to explicitly set the path to my employer's certificate (which is enforced or my laptop) as `ssl-cert-file` in `/etc/nix/nix.conf`
+
+## References
+
+- [Nix-Darwin Fresh Install guide](https://github.com/MatthiasBenaets/nix-config/blob/master/darwin.org) by [Matthias Benaets](https://github.com/MatthiasBenaets)
+- [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer)
+- [nix-darwin](https://github.com/LnL7/nix-darwin)
