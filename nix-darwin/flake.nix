@@ -17,6 +17,8 @@
       environment.systemPackages =
         [ 
           pkgs.alacritty
+          pkgs.bun
+          pkgs.deno
           pkgs.iterm2
           pkgs.slack
           pkgs.vim
@@ -56,7 +58,7 @@
       };
 
       # The platform the configuration will be used on.
-      nixpkgs.hostPlatform = "x86_64-darwin";
+      nixpkgs.hostPlatform = "aarch64-darwin";
     };
   in
   {
