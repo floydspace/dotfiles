@@ -19,11 +19,12 @@
           pkgs.bun
           pkgs.deno
           # pkgs.direnv # There is some issue with zsh config
+          # pkgs.discord # Not working in NN network
           pkgs.gh
           # pkgs.git # There is some issue with OpenSSL when pushing to github
           pkgs.go
           pkgs.goreleaser
-          # pkgs.iterm2
+          pkgs.iterm2
           pkgs.jq
           pkgs.slack
           pkgs.vim
@@ -58,7 +59,6 @@
         casks = [
           "drawio"
           "figma"
-          "iterm2"
           "kdiff3"
           "mongodb-compass"
           "postman"
