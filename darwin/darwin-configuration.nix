@@ -39,11 +39,7 @@
       cleanup = "zap";
     };
     brews = [
-      "direnv"
       "git"
-    ];
-    casks = [
-      "spotify"
     ];
     masApps = {
       "Telegram" = 747648890;

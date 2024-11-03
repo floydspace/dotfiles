@@ -34,6 +34,7 @@
       "aws-sso-util"
       "certifi"
       "cocoapods"
+      "direnv"
       "flyctl"
       "ios-deploy"
       "localstack-cli"
@@ -58,6 +59,7 @@
       "mongodb-compass"
       "postman"
       "sourcetree"
+      "spotify"
       "obsidian"
       "upscayl"
     ];
