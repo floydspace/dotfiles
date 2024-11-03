@@ -19,24 +19,13 @@
 
   homebrew = {
     brews = [
-      "bash"
       "docker"
       "ios-webkit-debug-proxy"
       "jpeg"
-      "mongodb"
-      "node"
-      "openssl"
-      "pkg-config"
-      "python@2"
       "rabbitmq"
-      "readline"
       "sqlite"
-      "usbmuxd"
       "wireguard-go"
       "wireguard-tools"
-      "wxmac"
-      "wxwidgets"
-      "yarn"
     ];
     # masApps = {
     # };
