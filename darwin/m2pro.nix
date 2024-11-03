@@ -17,7 +17,6 @@
       # direnv # There is some issue with zsh config
       # discord # Not working in NN network
       gh
-      # git # There is some issue with OpenSSL when pushing to github
       go
       goreleaser
       jq
@@ -32,6 +31,12 @@
     #   "docker"
     #   "docker-toolbox"
     #   "google-chrome"
+      "drawio"
+      "figma"
+      "kdiff3"
+      "mongodb-compass"
+      "postman"
+      "sourcetree"
       "obsidian"
       "upscayl"
     ];
@@ -66,8 +71,7 @@
     #     tilesize = 20;
     #   };
       finder = {
-        # ShowPathbar = true;
-        # ShowStatusBar = true;
+        ShowPathbar = true;
         FXPreferredViewStyle = "Nlsv";
       };
     #   trackpad = {
@@ -78,27 +82,27 @@
     #     MouseButtonMode = "TwoButton";
     #   };
 
-    #   CustomUserPreferences = {
-    #     # Settings of plist in ~/Library/Preferences/
-    #     "com.apple.finder" = {
-    #       # Set home directory as startup window
-    #       NewWindowTargetPath = "file:///Users/${vars.user}/";
-    #       NewWindowTarget = "PfHm";
-    #       # Set search scope to directory
-    #       FXDefaultSearchScope = "SCcf";
-    #       # Multi-file tab view
-    #       FinderSpawnTab = true;
-    #     };
-    #     "com.apple.desktopservices" = {
-    #       # Disable creating .DS_Store files in network an USB volumes
-    #       DSDontWriteNetworkStores = true;
-    #       DSDontWriteUSBStores = true;
-    #     };
-    #     # Show battery percentage
-    #     "~/Library/Preferences/ByHost/com.apple.controlcenter".BatteryShowPercentage = true;
-    #     # Privacy
-    #     "com.apple.AdLib".allowApplePersonalizedAdvertising = false;
-    #   };
+      CustomUserPreferences = {
+        # Settings of plist in ~/Library/Preferences/
+        # "com.apple.finder" = {
+        #   # Set home directory as startup window
+        #   NewWindowTargetPath = "file:///Users/${vars.user}/";
+        #   NewWindowTarget = "PfHm";
+        #   # Set search scope to directory
+        #   FXDefaultSearchScope = "SCcf";
+        #   # Multi-file tab view
+        #   FinderSpawnTab = true;
+        # };
+        # "com.apple.desktopservices" = {
+        #   # Disable creating .DS_Store files in network an USB volumes
+        #   DSDontWriteNetworkStores = true;
+        #   DSDontWriteUSBStores = true;
+        # };
+        # Show battery percentage
+        "~/Library/Preferences/ByHost/com.apple.controlcenter".BatteryShowPercentage = true;
+        # Privacy
+        "com.apple.AdLib".allowApplePersonalizedAdvertising = false;
+      };
     #   CustomSystemPreferences = {
     #     # ~/Library/Preferences/
 

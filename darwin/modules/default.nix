@@ -12,5 +12,4 @@
 [
   ./alacritty.nix
   ./iterm2.nix
-  ./kitty.nix
 ]

@@ -25,11 +25,8 @@
       VISUAL = "${vars.editor}";
     };
     systemPackages = with pkgs; [
-    #   git # Version Control
-    #   mas # Mac App Store $ mas search <app>
-      ranger # File Manager
-    #   tldr # Help
-    #   zsh-powerlevel10k # Prompt
+      # git # There is some issue with OpenSSL when pushing to github
+      # zsh-powerlevel10k # Prompt
     ];
   };
 
@@ -65,12 +62,6 @@
       "wix/brew"
     ];
     casks = [
-      "drawio"
-      "figma"
-      "kdiff3"
-      "mongodb-compass"
-      "postman"
-      "sourcetree"
       "spotify"
     ];
     masApps = {
