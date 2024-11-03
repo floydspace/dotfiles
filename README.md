@@ -43,7 +43,12 @@ nix-collect-garbage -d
   ```sh
   warning: error: unable to download 'https://cache.nixos.org/8n8a23azcm8smr1q6xk77jb2pgxa518f.narinfo': SSL peer certificate or SSH remote key was not OK (60); retrying in 310 ms
   ```
-  I had to explicitly set the path to my employer's certificate (which is enforced or my laptop) as `ssl-cert-file` in `/etc/nix/nix.conf`
+  I had to explicitly set the path to my employer's certificate (which is enforced or my laptop) as `ssl-cert-file` in `/etc/nix/nix.conf` and as `NIX_SSL_CERT_FILE` in `/Library/LaunchDaemons/org.nixos.nix-daemon.plist`.
+
+  Then, I had to restart the `nix-daemon` service:
+  ```sh
+  sudo launchctl kickstart -k system/org.nixos.nix-daemon
+  ```
 
 ## References
 
