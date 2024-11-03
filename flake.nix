@@ -27,25 +27,18 @@
     };
 
   outputs = inputs @ { self, nixpkgs, home-manager, darwin, ... }: # Function telling flake which inputs to use
-    let
-      # Variables Used In Flake
-      vars = {
-        user = "victor";
-        editor = "nvim";
-      };
-    in
     {
       darwinConfigurations = (
         import ./darwin {
           inherit (nixpkgs) lib;
-          inherit inputs nixpkgs home-manager darwin vars;
+          inherit inputs nixpkgs home-manager darwin;
         }
       );
 
     #   homeConfigurations = (
     #     import ./nix {
     #       inherit (nixpkgs) lib;
-    #       inherit inputs nixpkgs home-manager vars;
+    #       inherit inputs nixpkgs home-manager;
     #     }
     #   );
     };

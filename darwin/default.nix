@@ -8,7 +8,7 @@
 #       └─ <host>.nix
 #
 
-{ inputs, nixpkgs, darwin, home-manager, vars, ... }:
+{ inputs, nixpkgs, darwin, home-manager, ... }:
 
 let
   systemConfig = system: {
@@ -23,6 +23,9 @@ in
   MacBookM2Pro =
     let
       inherit (systemConfig "aarch64-darwin") system pkgs stable;
+      vars = {
+        user = "victor";
+      };
     in
     darwin.lib.darwinSystem {
       inherit system;
@@ -41,6 +44,9 @@ in
   MacMini =
     let
       inherit (systemConfig "x86_64-darwin") system pkgs stable;
+      vars = {
+        user = "admin";
+      };
     in
     darwin.lib.darwinSystem {
       inherit system;

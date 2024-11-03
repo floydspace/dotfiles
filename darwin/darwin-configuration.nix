@@ -20,10 +20,6 @@
   };
 
   environment = {
-    variables = {
-      EDITOR = "${vars.editor}";
-      VISUAL = "${vars.editor}";
-    };
     systemPackages = with pkgs; [
       # git # There is some issue with OpenSSL when pushing to github
       # zsh-powerlevel10k # Prompt
