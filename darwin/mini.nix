@@ -22,10 +22,12 @@
       "docker"
       "ios-webkit-debug-proxy"
       "jpeg"
+      "libusbmuxd"
       "rabbitmq"
       "sqlite"
       "wireguard-go"
       "wireguard-tools"
+      "wxwidgets"
     ];
     # masApps = {
     # };
