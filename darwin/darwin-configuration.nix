@@ -41,11 +41,6 @@
     brews = [
       "git"
     ];
-    masApps = {
-      "Telegram" = 747648890;
-      "WireGuard" = 1451685025;
-      "WhatsApp Messenger" = 310633997;
-    };
   };
 
   home-manager.users.${vars.user} = {
