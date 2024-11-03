@@ -39,27 +39,8 @@
       cleanup = "zap";
     };
     brews = [
-      "awscli"
-      "applesimutils"
-      "aws-sso-creds"
-      "aws-sso-util"
-      "certifi"
-      "cocoapods"
       "direnv"
-      "flyctl"
       "git"
-      "ios-deploy"
-      "localstack-cli"
-      "rbenv"
-      "ruby"
-      "scrcpy"
-      "telnet"
-      "tfenv"
-    ];
-    taps = [
-      "jaxxstorm/tap"
-      "localstack/tap"
-      "wix/brew"
     ];
     casks = [
       "spotify"

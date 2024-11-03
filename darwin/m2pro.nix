@@ -27,6 +27,27 @@
   };
 
   homebrew = {
+    brews = [
+      "awscli"
+      "applesimutils"
+      "aws-sso-creds"
+      "aws-sso-util"
+      "certifi"
+      "cocoapods"
+      "flyctl"
+      "ios-deploy"
+      "localstack-cli"
+      "rbenv"
+      "ruby"
+      "scrcpy"
+      "telnet"
+      "tfenv"
+    ];
+    taps = [
+      "jaxxstorm/tap"
+      "localstack/tap"
+      "wix/brew"
+    ];
     casks = [
     #   "docker"
     #   "docker-toolbox"

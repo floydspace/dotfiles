@@ -37,4 +37,22 @@ in
         }
       ];
     };
+
+  MacMini =
+    let
+      inherit (systemConfig "x86_64-darwin") system pkgs stable;
+    in
+    darwin.lib.darwinSystem {
+      inherit system;
+      specialArgs = { inherit inputs system pkgs stable vars; };
+      modules = [
+        ./darwin-configuration.nix
+        ./mini.nix
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+        }
+      ];
+    };
 }
