@@ -40,8 +40,8 @@
 
           # Default colors
           [colors.primary]
-          background = '#2c2c2c'
-          foreground = '#d6d6d6'
+          background = '#15191e'
+          foreground = '#fffbf6'
 
           dim_foreground    = '#dbdbdb'
           bright_foreground = '#d9d9d9'
@@ -53,25 +53,25 @@
 
           # Normal colors
           [colors.normal]
-          black   = '#1c1c1c'
-          red     = '#bc5653'
-          green   = '#909d63'
-          yellow  = '#ebc17a'
-          blue    = '#7eaac7'
-          magenta = '#aa6292'
-          cyan    = '#86d3ce'
-          white   = '#cacaca'
+          black   = '#2e2e2e'
+          red     = '#eb4129'
+          green   = '#abe047'
+          yellow  = '#f6c744'
+          blue    = '#47a0f3'
+          magenta = '#7b5cb0'
+          cyan    = '#64dbed'
+          white   = '#e5e9f0'
 
           # Bright colors
           [colors.bright]
-          black   = '#636363'
-          red     = '#bc5653'
-          green   = '#909d63'
-          yellow  = '#ebc17a'
-          blue    = '#7eaac7'
-          magenta = '#aa6292'
-          cyan    = '#86d3ce'
-          white   = '#f7f7f7'
+          black   = '#565656'
+          red     = '#ec5357'
+          green   = '#c0e17d'
+          yellow  = '#f9da6a'
+          blue    = '#49a4f8'
+          magenta = '#a47de9'
+          cyan    = '#99faf2'
+          white   = '#ffffff'
 
           # Dim colors
           [colors.dim]
