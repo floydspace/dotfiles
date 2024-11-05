@@ -48,6 +48,9 @@
   # Set Git commit hash for darwin-version.
   system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
 
+  # Enable TouchID for sudo authentication
+  security.pam.enableSudoTouchIdAuth = true;
+
   nix = {
     package = pkgs.nix;
     settings.experimental-features = "nix-command flakes";
