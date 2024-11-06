@@ -13,7 +13,7 @@
     home.file = {
       ".config/kitty/kitty.conf" = {
         text = ''
-          font_family Monaspace Argon Var
+          font_family MonaspiceAr Nerd Font
           font_size 12
 
           background_opacity 0.8

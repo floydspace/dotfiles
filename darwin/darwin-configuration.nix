@@ -19,6 +19,10 @@
     shell = pkgs.zsh;
   };
 
+  fonts.packages = [
+    (pkgs.nerdfonts.override { fonts = [ "Monaspace" ]; })
+  ];
+
   environment = {
     systemPackages = with pkgs; [
       # git # There is some issue with OpenSSL when pushing to github

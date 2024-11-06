@@ -10,8 +10,4 @@
       iterm2
     ];
   };
-
-  fonts.packages = [
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-  ];
 }

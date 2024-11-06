@@ -11,10 +11,6 @@
     ];
   };
 
-  fonts.packages = [
-    (pkgs.nerdfonts.override { fonts = [ "Monaspace" ]; })
-  ];
-
   home-manager.users.${vars.user} = {
     home.file = {
       ".config/alacritty/alacritty.toml" = {
@@ -34,7 +30,7 @@
           option_as_alt = "Both"
 
           [font]
-          normal.family = "Monaspace Argon Var"
+          normal.family = "MonaspiceAr Nerd Font"
 
           size=12
 
