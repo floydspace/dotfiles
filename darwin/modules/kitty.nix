@@ -7,15 +7,14 @@
 {
   homebrew.casks = [
     "kitty"
-    "font-meslo-lg-nerd-font"
   ];
 
   home-manager.users.${vars.user} = {
     home.file = {
       ".config/kitty/kitty.conf" = {
         text = ''
-          font_family MesloLGS Nerd Font Mono
-          font_size 13
+          font_family Monaspace Argon Var
+          font_size 12
 
           background_opacity 0.8
           background_blur 16
