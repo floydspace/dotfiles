@@ -12,7 +12,7 @@
   };
 
   fonts.packages = [
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    (pkgs.nerdfonts.override { fonts = [ "Monaspace" ]; })
   ];
 
   home-manager.users.${vars.user} = {
@@ -34,9 +34,9 @@
           option_as_alt = "Both"
 
           [font]
-          normal.family = "JetBrainsMono Nerd Font"
+          normal.family = "Monaspace Argon Var"
 
-          size=13
+          size=12
 
           # Default colors
           [colors.primary]
