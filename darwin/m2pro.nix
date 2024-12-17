@@ -43,11 +43,13 @@
       "scrcpy"
       "telnet"
       "tfenv"
+      "granted"
     ];
     taps = [
       "jaxxstorm/tap"
       "localstack/tap"
       "wix/brew"
+      "common-fate/granted"
     ];
     casks = [
     #   "docker"
