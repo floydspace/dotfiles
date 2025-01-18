@@ -20,7 +20,7 @@
   };
 
   fonts.packages = [
-    (pkgs.nerdfonts.override { fonts = [ "Monaspace" ]; })
+    pkgs.nerd-fonts.monaspace
   ];
 
   environment = {
