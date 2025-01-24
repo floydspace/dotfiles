@@ -36,6 +36,7 @@
       "cocoapods"
       "direnv"
       "flyctl"
+      "fnm"
       "ios-deploy"
       "localstack-cli"
       "mcfly"
