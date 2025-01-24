@@ -38,6 +38,7 @@
       "flyctl"
       "ios-deploy"
       "localstack-cli"
+      "mcfly"
       "rbenv"
       "ruby"
       "scrcpy"
