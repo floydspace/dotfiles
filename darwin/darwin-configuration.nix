@@ -47,13 +47,11 @@
     home.stateVersion = "22.05";
   };
 
-  services.nix-daemon.enable = true;
-
   # Set Git commit hash for darwin-version.
   system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
 
   # Enable TouchID for sudo authentication
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   nix = {
     package = pkgs.nix;

@@ -12,6 +12,7 @@
 {
   environment = {
     systemPackages = with pkgs; [
+      azure-cli
       bun
       deno
       # direnv # There is some issue with zsh config
