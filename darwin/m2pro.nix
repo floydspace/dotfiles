@@ -47,6 +47,7 @@
       "telnet"
       "tfenv"
       "granted"
+      "uv"
     ];
     taps = [
       "jaxxstorm/tap"
