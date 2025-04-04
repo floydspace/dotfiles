@@ -40,6 +40,7 @@
       "fnm"
       "ios-deploy"
       "localstack-cli"
+      "mas"
       "mcfly"
       "rbenv"
       "ruby"
@@ -74,7 +75,8 @@
       "Telegram" = 747648890;
       "WireGuard" = 1451685025;
       "WhatsApp Messenger" = 310633997;
-      "Xcode" = 497799835;
+      "Klack" = 6446206067;
+      # "Xcode" = 497799835;
     };
   };
 
