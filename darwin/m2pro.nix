@@ -60,6 +60,7 @@
     #   "docker"
     #   "docker-toolbox"
     #   "google-chrome"
+      "bruno"
       "drawio"
       "figma"
       "kdiff3"
