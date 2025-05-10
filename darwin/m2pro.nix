@@ -68,6 +68,7 @@
       "postman"
       "sourcetree"
       "spotify"
+      "SuperCollider"
       "obsidian"
       "upscayl"
     ];
