@@ -21,6 +21,7 @@
       go
       goreleaser
       jq
+      nh
       slack
       vim
       zoom-us
@@ -50,6 +51,7 @@
       "tfenv"
       "granted"
       "uv"
+      "zig"
     ];
     taps = [
       "jaxxstorm/tap"
