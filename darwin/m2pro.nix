@@ -39,6 +39,7 @@
       "flyctl"
       "fnm"
       "ios-deploy"
+      "killswitch"
       "localstack-cli"
       "mas"
       "mcfly"
