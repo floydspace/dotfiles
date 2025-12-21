@@ -21,6 +21,7 @@
       go
       goreleaser
       jq
+      jujutsu
       nh
       slack
       vim
@@ -39,6 +40,7 @@
       "direnv"
       "flyctl"
       "fnm"
+      "gitleaks"
       "ios-deploy"
       "killswitch"
       "localstack-cli"
@@ -69,6 +71,7 @@
       "kdiff3"
       "mongodb-compass"
       "postman"
+      "session-manager-plugin"
       "sourcetree"
       "spotify"
       "SuperCollider"
