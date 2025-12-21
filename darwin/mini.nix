@@ -10,6 +10,9 @@
 { pkgs, vars, ... }:
 
 {
+  # Set the primary user for this device
+  system.primaryUser = "admin";
+
   environment = {
     systemPackages = with pkgs; [
       discord

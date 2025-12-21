@@ -10,6 +10,9 @@
 { pkgs, vars, ... }:
 
 {
+  # Set the primary user for this device
+  system.primaryUser = "victor";
+
   environment = {
     systemPackages = with pkgs; [
       azure-cli
@@ -141,7 +144,7 @@
         #   DSDontWriteUSBStores = true;
         # };
         # Show battery percentage
-        "~/Library/Preferences/ByHost/com.apple.controlcenter".BatteryShowPercentage = true;
+        "com.apple.controlcenter".BatteryShowPercentage = true;
         # Privacy
         "com.apple.AdLib".allowApplePersonalizedAdvertising = false;
       };
