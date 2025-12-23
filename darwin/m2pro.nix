@@ -49,6 +49,7 @@
       "localstack-cli"
       "mas"
       "mcfly"
+      "oci-cli"
       "rbenv"
       "ruby"
       "scrcpy"
