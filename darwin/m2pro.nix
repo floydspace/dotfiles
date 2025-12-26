@@ -42,6 +42,7 @@
       "cocoapods"
       "direnv"
       "flyctl"
+      "fn"
       "fnm"
       "gitleaks"
       "ios-deploy"
