@@ -51,6 +51,7 @@
       "mas"
       "mcfly"
       "oci-cli"
+      "opencode"
       "rbenv"
       "ruby"
       "scrcpy"
@@ -62,6 +63,7 @@
       "zig"
     ];
     taps = [
+      "anomalyco/tap"
       "jaxxstorm/tap"
       "localstack/tap"
       "wix/brew"
@@ -72,6 +74,7 @@
     #   "docker-toolbox"
     #   "google-chrome"
       "bruno"
+      "copilot-cli"
       "drawio"
       "figma"
       "kdiff3"
