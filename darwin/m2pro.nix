@@ -58,6 +58,7 @@
       "tfenv"
       "granted"
       "uv"
+      "wakatime-cli"
       "zig"
     ];
     taps = [
