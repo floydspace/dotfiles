@@ -51,7 +51,7 @@
       "mas"
       "mcfly"
       "oci-cli"
-      "opencode"
+      "anomalyco/tap/opencode"
       "rbenv"
       "ruby"
       "scrcpy"
