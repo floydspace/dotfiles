@@ -104,6 +104,48 @@
           key = "Q"
           mods = "Command"
           action = "Quit"
+
+          # Option + Left Arrow (jump word left)
+          [[keyboard.bindings]]
+          key = "Left"
+          mods = "Alt"
+          chars = "\u001Bb"
+
+          # Option + Right Arrow (jump word right)
+          [[keyboard.bindings]]
+          key = "Right"
+          mods = "Alt"
+          chars = "\u001Bf"
+
+          # Cmd + Left Arrow (jump to start of line)
+          [[keyboard.bindings]]
+          key = "Left"
+          mods = "Command"
+          chars = "\u001BOH"
+
+          # Cmd + Right Arrow (jump to end of line)
+          [[keyboard.bindings]]
+          key = "Right"
+          mods = "Command"
+          chars = "\u001BOF"
+
+          # Cmd + Backspace (delete to start of line)
+          [[keyboard.bindings]]
+          key = "Back"
+          mods = "Command"
+          chars = "\u0015"
+
+          # Cmd + Up Arrow (previous command in history)
+          [[keyboard.bindings]]
+          key = "Up"
+          mods = "Command"
+          chars = "\u001B[A"
+
+          # Cmd + Down Arrow (next command in history)
+          [[keyboard.bindings]]
+          key = "Down"
+          mods = "Command"
+          chars = "\u001B[B"
         '';
       };
     };
