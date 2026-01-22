@@ -12,9 +12,18 @@
 { pkgs, vars, ... }:
 
 {
-  # Install Powerlevel10k
+  # Install Powerlevel10k and modern CLI tools
   environment.systemPackages = with pkgs; [
     zsh-powerlevel10k
+    
+    # Modern CLI replacements
+    bat          # better cat with syntax highlighting
+    eza          # better ls with colors and icons
+    fzf          # fuzzy finder
+    zoxide       # smart cd that learns your habits
+    ripgrep      # better grep (respects .gitignore)
+    fd           # better find
+    mcfly        # smart shell history
   ];
 
   home-manager.users.${vars.user} = {
@@ -45,6 +54,16 @@
         ohmyzsh = "code ~/.oh-my-zsh";
         awsp = "source _awsp";
         assume = ". assume";
+        
+        # Modern CLI tool aliases
+        cat = "bat";
+        ls = "eza --icons --git";
+        ll = "eza --icons --git -l";
+        la = "eza --icons --git -la";
+        tree = "eza --icons --git --tree";
+        cd = "z";  # zoxide
+        grep = "rg";
+        find = "fd";
       };
       
       initContent = ''
@@ -74,6 +93,12 @@
         
         # Cargo environment
         [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+        
+        # Zoxide (smart cd) initialization
+        eval "$(zoxide init zsh)"
+        
+        # McFly (smart shell history) initialization
+        eval "$(mcfly init zsh)"
         
         # Corporate-specific environment variables (not managed by Nix)
         [ -f "$HOME/.zsh_corporate" ] && source "$HOME/.zsh_corporate"

@@ -40,7 +40,7 @@
       "aws-sso-util"
       "certifi"
       "cocoapods"
-      "direnv"
+      # "direnv" # Now managed by Nix in shell.nix
       "flyctl"
       "fn"
       "fnm"
@@ -49,7 +49,7 @@
       "killswitch"
       "localstack-cli"
       "mas"
-      "mcfly"
+      # "mcfly" # Now managed by Nix in shell.nix
       "oci-cli"
       "anomalyco/tap/opencode"
       "rbenv"
@@ -60,7 +60,7 @@
       "granted"
       "uv"
       "wakatime-cli"
-      "zig"
+      # "zig" # Now managed by Nix in development.nix
     ];
     taps = [
       "anomalyco/tap"

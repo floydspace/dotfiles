@@ -25,6 +25,9 @@
       
       # pnpm package manager
       PNPM_HOME = "$HOME/Library/pnpm";
+      
+      # FNM (Fast Node Manager)
+      FNM_DIR = "$HOME/.local/share/fnm";
     };
     
     home.sessionPath = [
