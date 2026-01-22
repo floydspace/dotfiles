@@ -22,15 +22,24 @@
     programs.zsh.initContent = ''
       # FNM (Fast Node Manager) - 40x faster than NVM
       # --use-on-cd: auto-switch on directory change
-      # --resolve-engines: respect package.json engines field
-      eval "$(fnm env --use-on-cd --resolve-engines)"
+      eval "$(fnm env --use-on-cd)"
       
       # FNM: Revert to default when leaving .nvmrc directories
+      # This hook checks parent directories to maintain version when cd-ing deeper
       _fnm_autoload_hook() {
-        if [[ -f .nvmrc || -f .node-version ]]; then
-          fnm use --silent-if-unchanged 2>/dev/null
-        elif [[ -e "$FNM_DIR/aliases/default" ]]; then
-          # Only switch to default if we're not already on it
+        # Search for .nvmrc or .node-version in current and parent directories
+        local dir="$PWD"
+        while [[ "$dir" != "/" ]]; do
+          if [[ -f "$dir/.nvmrc" || -f "$dir/.node-version" ]]; then
+            # Found version file in current or parent directory
+            fnm use --silent-if-unchanged 2>/dev/null
+            return 0
+          fi
+          dir="$(dirname "$dir")"
+        done
+        
+        # No version file found in tree, revert to default
+        if [[ -e "$FNM_DIR/aliases/default" ]]; then
           local current_version=$(fnm current 2>/dev/null)
           local default_version=$(basename "$(dirname "$(readlink "$FNM_DIR/aliases/default")")")
           if [[ "$current_version" != "$default_version" ]]; then
