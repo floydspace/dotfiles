@@ -34,6 +34,10 @@
 
           size=12
 
+          [terminal.shell]
+          program = "/bin/zsh"
+          args = ["-l"]
+
           # Default colors
           [colors.primary]
           background = '#15191e'
@@ -79,6 +83,27 @@
           magenta = '#6e4962'
           cyan    = '#5c8482'
           white   = '#828282'
+
+          # Keybindings
+          [[keyboard.bindings]]
+          key = "N"
+          mods = "Command"
+          action = "CreateNewWindow"
+
+          [[keyboard.bindings]]
+          key = "T"
+          mods = "Command"
+          action = "CreateNewTab"
+
+          [[keyboard.bindings]]
+          key = "W"
+          mods = "Command"
+          action = "Quit"
+
+          [[keyboard.bindings]]
+          key = "Q"
+          mods = "Command"
+          action = "Quit"
         '';
       };
     };

@@ -22,14 +22,14 @@ in
 {
   MacBookM2Pro =
     let
-      inherit (systemConfig "aarch64-darwin") system pkgs stable;
+      inherit (systemConfig "aarch64-darwin") system pkgs;
       vars = {
         user = "victor";
       };
     in
     darwin.lib.darwinSystem {
       inherit system;
-      specialArgs = { inherit inputs system pkgs stable vars; };
+      specialArgs = { inherit inputs system pkgs vars; };
       modules = [
         ./darwin-configuration.nix
         ./m2pro.nix
@@ -43,14 +43,14 @@ in
 
   MacMini =
     let
-      inherit (systemConfig "x86_64-darwin") system pkgs stable;
+      inherit (systemConfig "x86_64-darwin") system pkgs;
       vars = {
         user = "admin";
       };
     in
     darwin.lib.darwinSystem {
       inherit system;
-      specialArgs = { inherit inputs system pkgs stable vars; };
+      specialArgs = { inherit inputs system pkgs vars; };
       modules = [
         ./darwin-configuration.nix
         ./mini.nix

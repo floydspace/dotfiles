@@ -12,4 +12,8 @@
 [
   ./alacritty.nix
   ./iterm2.nix
+  ./kitty.nix
+  ./shell.nix
+  ./development.nix
+  ./environment.nix
 ]

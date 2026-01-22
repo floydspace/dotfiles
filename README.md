@@ -20,7 +20,7 @@ darwin-rebuild switch --flake ".#MacBookM2Pro"
 Update packages:
     
 ```sh
-nix flake update --flake "./nix-darwin"
+nix flake update
 
 darwin-rebuild switch --flake ".#MacBookM2Pro"
 ```
