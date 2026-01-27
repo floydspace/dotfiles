@@ -63,7 +63,7 @@
         tree = "eza --icons --git --tree";
         cd = "z";  # zoxide
         grep = "rg";
-        find = "fd";
+        # find = "fd";
       };
       
       initContent = ''
