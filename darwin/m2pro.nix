@@ -41,6 +41,7 @@
       "certifi"
       "cocoapods"
       # "direnv" # Now managed by Nix in shell.nix
+      "ffmpeg"
       "flyctl"
       "fn"
       "fnm"
@@ -77,6 +78,7 @@
       "copilot-cli"
       "drawio"
       "figma"
+      "git-credential-manager"
       "kdiff3"
       "mongodb-compass"
       "postman"
