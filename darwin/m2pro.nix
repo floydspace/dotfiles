@@ -45,6 +45,7 @@
       "flyctl"
       "fn"
       "fnm"
+      "git-filter-repo"
       "gitleaks"
       "ios-deploy"
       "killswitch"
