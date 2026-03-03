@@ -34,7 +34,9 @@
 
   homebrew = {
     brews = [
+      "agg"
       "awscli"
+      "asciinema"
       "applesimutils"
       "aws-sso-creds"
       "aws-sso-util"
