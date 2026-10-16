@@ -26,9 +26,9 @@
       jq
       jujutsu
       nh
-      slack
+      # slack
       vim
-      zoom-us
+      # zoom-us
     ];
   };
 
