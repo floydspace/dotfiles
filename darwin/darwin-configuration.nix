@@ -35,6 +35,7 @@
   homebrew = {
     enable = true;
     onActivation = {
+      autoUpdate = true;
       upgrade = false;
       cleanup = "zap";
     };
