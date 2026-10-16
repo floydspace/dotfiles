@@ -67,12 +67,13 @@
       "worktrunk"
       # "zig" # Now managed by Nix in development.nix
     ];
+    # Homebrew 6+ refuses to load formulae from untrusted third-party taps
     taps = [
-      "anomalyco/tap"
-      "jaxxstorm/tap"
-      "localstack/tap"
-      "wix/brew"
-      "common-fate/granted"
+      { name = "anomalyco/tap"; trusted = true; }
+      { name = "jaxxstorm/tap"; trusted = true; }
+      { name = "localstack/tap"; trusted = true; }
+      { name = "wix/brew"; trusted = true; }
+      { name = "common-fate/granted"; trusted = true; }
     ];
     casks = [
     #   "docker"
