@@ -64,7 +64,6 @@
       "granted"
       "uv"
       "wakatime-cli"
-      "worktrunk"
       # "zig" # Now managed by Nix in development.nix
     ];
     # Homebrew 6+ refuses to load formulae from untrusted third-party taps
