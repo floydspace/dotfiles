@@ -37,7 +37,7 @@
       "agg"
       "awscli"
       "asciinema"
-      "applesimutils"
+      "wix-incubator/brew/applesimutils"
       "aws-sso-creds"
       "aws-sso-util"
       "certifi"
@@ -71,7 +71,7 @@
       { name = "anomalyco/tap"; trusted = true; }
       { name = "jaxxstorm/tap"; trusted = true; }
       { name = "localstack/tap"; trusted = true; }
-      { name = "wix/brew"; trusted = true; }
+      { name = "wix-incubator/brew"; trusted = true; } # Renamed from wix/brew, which no longer taps cleanly
       { name = "common-fate/granted"; trusted = true; }
     ];
     casks = [
