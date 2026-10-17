@@ -55,7 +55,7 @@
       "mas"
       # "mcfly" # Now managed by Nix in shell.nix
       "oci-cli"
-      "anomalyco/tap/opencode"
+      "anomalyco/tap/opencode-v2"
       "rbenv"
       "ruby"
       "scrcpy"
